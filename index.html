@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Practice</title>
+</head>
+<body>
+  <p>Non promative data type- Object, Array, RegExp
+    Object data type defines as- var A={ } <br>
+    Array data type defines as- var A=[ ]
+  </p>
+
+
+  <script>
+    document.write("Hello JavaScript")
+    // This tag is use for single line comment
+    /*document.write("Hello JavaScript")
+    document.write("Hello JavaScript")
+    document.write("Hello JavaScript")
+    document.write("Hello JavaScript")
+   */
+  // This tag is use for single miltiple line comment
+    </script><br>
+
+    <script>
+      var x=10;
+      var y=20;
+      var z=x+y;
+      document.write(z);
+    </script><br>
+
+    <script>
+      var A={
+        Name:"Prema",
+        Age:"27",
+        City:"Dhaka",
+      }
+
+      document.write(A.Name);
+    </script><br>
+
+    <script>
+      var A=[ 'Dhaka',  'Rajshahi',  'Khulna']
+      document.write(A);
+    </script><br>
+
+    <h1>if else statement</h1>
+    <script>
+      var Age=70;
+      if(Age>=80){
+      document.write("He is old")
+    }
+    else{
+      document.write("He is young")
+    }
+    </script><br>
+    <script>
+      var marks=46;
+      if(marks>=80 && marks<=100)
+      {
+        document.write("A+")
+      }
+      else if(marks>=70 && marks<=79){
+        document.write("A")
+      }
+      else if(marks>=50 && marks<=69){
+        document.write("A-")
+      } 
+      else if(marks>=40 && marks<=49){
+        document.write("B")
+      }
+      else if(marks>=33 && marks<=39){
+        document.write("C")
+      }
+      else if(marks>=0 && marks<=32){
+        document.write("F")
+      }
+      </script><br> 
+
+    <h1>Switch Statement</h1>
+    <script>
+      var tmarks=27;
+      switch(true){
+        case(tmarks<=100 && tmarks>=80):
+        document.write('A+');
+        break;
+
+        case(tmarks<=79 && tmarks>=70):
+        document.write('A');
+        break;
+        
+        case(tmarks<=69 && tmarks>=60):
+        document.write('B');
+        break;
+        
+        case(tmarks<=59 && tmarks>=50):
+        document.write('C');
+        break;
+        
+        case(tmarks<=49 && tmarks>=33):
+        document.write('D');
+        break;
+
+        default:
+        document.write('F'); 
+      }
+    </script>
+    <!-- forloop -->
+    
+      <h1>For Loop</h1>
+      <script>
+      var i;
+      for(i=0; i<10; i=i+1)
+      {
+        document.write(i+"<button>Sumbit</button> <br><br>");
+      }
+
+    </script>
+    <h3>2 ta == dile just value compair kore, 3ta === dile value er sathe datatype tao compair kore</h3>
+    
+    <script>
+      var i;
+      for(i=0; i<10; i=i+1){
+        if(i==5 || i===7){
+          continue;
+        }
+        document.write(i+"<button>Sumbit</button> <br>");
+      }
+  </script><br><br><br>
+  <script>
+      var i;
+      for(i=0; i<10; i=i+1){
+        if(i==5){
+          break;
+        }
+        document.write(i+"<button>Sumbit</button> <br>");
+      }
+  </script>
+  <h1>While Loop</h1>
+  <script>
+    var i=0;
+    while(i<10){
+      document.write(i+"<button>Sumbit</button><br>");
+      i=i+1;
+    }
+  </script>
+  <h1>Do While Loop</h1>
+  <script>
+    var i=0;
+   do{
+      document.write(i+"<button>Sumbit</button><br>");
+      i=i+1;
+    }
+    while(i<5);
+  </script>
+
+<h1>JS Function</h1>
+<script>
+  function addTwonum(){
+    var num1=10;
+    var num2=30;
+    var num3=num1+num2;
+    document.write(num3+"<br>");
+  }
+  addTwonum();
+  addTwonum();
+  addTwonum();
+</script>
+
+<h1>Function Parameter</h1>
+<script>
+  function addTwonum(num1,num2){
+    var num3=num1+num2;
+    document.write(num3+"<br>");
+  }
+  addTwonum(20,30);
+  addTwonum(10,11);
+</script>
+<script>
+  function writeMyname(name){
+    document.write(name+"<br>");
+  }
+  writeMyname("Prema");
+  writeMyname("Hossain");
+</script>
+<h1>Function Return</h1>
+<script>
+  function addtwonumber(n1,n2){
+   return n1+n2;
+  }
+  var newvalue=addtwonumber(2,5)+5;
+  document.write(newvalue);
+</script>
+<h1>JS Object</h1>
+<script>
+  var MyDetails={
+    Name:"Prema",
+    Age:"28",
+    Village:"Dhaka",
+  }
+  document.write(MyDetails["Age"]+"<br>");
+  document.write(MyDetails.Name);
+</script>
+
+<h1>Array</h1>
+<script>
+  
+  var category=["Dhaka","Khulna","India","Itali","Rome",];
+  
+  document.write(category+"<br>")
+  document.write(category[2])
+</script>
+<h1>Array For Loop</h1>
+<script>
+  var city=["Dhaka","Khulna","India","Itali","Rome"];
+  var i;
+  for(i=0; i<city.length;i=i+1){
+  document.write(city[i]+"<br>")}
+ </script>
+ <h1>Array For In Loop</h1>
+ <script>
+  var category=["Health","Beauty","Grocery","Electronics","Gadgets","Mobile"];
+  for(var item in category){
+    document.write(category[item]+"<br>");
+  }
+ </script>
+ <h1>For In Loop Over Object</h1>
+ <script>
+  var person={
+    Name:"Hossain",
+    Age:"28",
+    Religion:"Islam",
+    Height:"6 feet",
+  }
+    for(var item in person){
+      document.write(person[item]+"<br>");
+  }
+ </script>
+ <h1>Array Concate</h1>
+ <script>
+  var arr1=['A','B','C'];
+  var arr2=['D','E','F'];
+  
+  var arr3=arr1.concat(arr2);
+  document.write(arr3+"<br>");
+  // for revarse output
+  var arr3=arr2.concat(arr1);
+  document.write(arr3);
+ </script>
+
+ <h1>Array Form <h6>(String ke venge array te convert kore)</h6></h1>
+ <script>
+  var Title="Prema Khatun";
+  var TitleArray=Array.from(Title);
+  document.write(TitleArray[6]);
+ </script>
+<h1> Array Filter</h1>
+<script>
+  var numArray=[30,35,40,45,50,52,55,60,79];
+  var result= numArray.filter(function (item){
+    return item>50
+  });
+  document.write(result);
+</script>
+
+<h1> Array Find</h1>
+<script>
+  var numArray=[30,35,40,45,50,52,55,60,79];
+  var result= numArray.find(function (item){
+    return item>50
+  });
+  document.write(result);
+</script>
+
+<h1> Array Find Index</h1>
+<script>
+  var numArray=[30,35,40,45,50,52,55,60,79];
+  var result= numArray.findIndex(function (item){
+    return item>55
+  });
+  document.write(result);
+</script>
+
+<h1>Array ForEach Method</h1>
+<script>
+  var numArray=[30,35,40,45,50,52,55,60,79];
+  numArray.forEach(function(item){
+    document.write(item+"<br>")
+  })
+</script>
+<h1>Array Includes</h1>
+<script>
+  var numArray=[30,35,40,45,50,52,55,60,79];
+  var result= numArray.includes(40);
+    document.write(result);
+ </script>
+
+<h1>Array IndexOf</h1>
+<script>
+  var numArray=[30,35,40,45,50,52,55,60,79];
+  var result= numArray.indexOf(40);
+    document.write(result);
+ </script>
+
+<h1>Array Reverse</h1>
+<script>
+  var numArray=[30,35,40,45,50,52,55,60,79,90];
+  var result= numArray.reverse();
+    document.write(result);
+ </script>
+
+<h1>Array Push</h1>
+<script>
+  var numArray=[30,35,40,45,50,52,55,60,79,90];
+  numArray.push(100);
+  numArray.push(120);
+    document.write(numArray);
+ </script>
+ <h1>Array POP</h1>
+ <script>
+   var numArray=[30,35,40,45,50,52,55,60,79,90];
+   numArray.pop();
+   numArray.pop();
+   numArray.pop();
+     document.write(numArray);
+  </script>
+
+  <h1>Array Sort <h6>sort holo ascendingly sajano</h6></h1>
+  <script>
+    var numArray=[30,40,35,57,45,50,52,55,60,79,90];
+    numArray.sort();
+    // numArray.sort().reverse(); c(descendin order er jonno)
+      document.write(numArray);
+   </script>  
+   <h1>Array Slice</h1>
+   <script>
+     var numArray=[30,40,35,57,45,50,52,55,60,79,90];
+     var result= numArray.slice(2,6);
+       document.write(result);
+    </script>  
+
+<h1>Array splice Remove</h1>
+<script>
+  var numArray=[30,40,35,57,45,50,52,55,60,79,90];
+  //numArray.splice(index,removeCount,item);
+  numArray.splice(2,6);
+  document.write(numArray);
+ </script>  
+ <h1>Array splice Add</h1>
+ <script>
+   var numArray=[30,40,35,57,45,50,52,55,60,79,90];
+   //numArray.splice(index,add,item);
+   numArray.splice(0,3,120);
+   document.write(numArray);
+  </script> 
+  <h1>String Methods - charAt,concat,indexOf,lastIndexOf,replace,substr,
+    substring,trim,toLowerCase,toUpperCase</h1> 
+  <script>
+    var country="Bangladesh";
+    var country1="India";
+    var country2="    China    ";
+    document.write(
+      country.charAt(2)
+    )
+    document.write(
+      country.concat (country1)
+    )
+    document.write(
+      country.indexOf("g")
+    )
+    document.write(
+      country.lastIndexOf("a")
+    )
+    document.write(
+      country1.replace("ia","-ians")
+    )
+    document.write(
+      country.substr(0,4)
+    )
+    document.write(
+      country.substring(6,10)
+    )
+    document.write(
+      country.toLowerCase()
+    )
+    document.write(
+      country.toUpperCase()
+    )
+
+    var country3=country2.trim()
+    document.write(
+      country3.length
+    )
+  </script>
+  <h1>JavaScript Date Object</h1>
+  <script>
+     var obj= new Date();
+     
+     document.write(
+      obj.getDate()
+     )
+     document.write(
+      obj.getMonth()
+     )
+     document.write(
+      obj.getFullYear()
+     )
+  </script>
+</body>
+</html>
+
+
+// git 
